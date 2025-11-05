@@ -47,7 +47,7 @@ func main() {
 		select {
 		case msg := <-ch:
 			fmt.Println("msg: ", msg)
-			return
+			return // ?? retrun de thoat khoi vong lap
 		case <-time.After(500 * time.Millisecond):
 			fmt.Println("No res yet, doing something else...")
 		}

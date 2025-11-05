@@ -60,3 +60,11 @@ func main() {
 
 	time.Sleep(time.Minute * 1)
 }
+
+// ung dung:
+// + Web crawler / Scraper (lay du lieu tu trang web)
+// + Gui email hang loat / Push notification
+// + Xu ly file hoac hinh anh song song
+// + pipeline xử lý dữ liệu
+// + Nhiệm vụ nền trong microservice (Gửi log sang Kafka / Elastic; Lưu audit logs; Queue giao dịch blockchain; Cập nhật dữ liệu cache nền)
+// + trong blockchain nhu analysis or price (so sanh va merge data)

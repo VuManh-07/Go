@@ -1,0 +1,30 @@
+server:
+  port: 8080
+database:
+  host: localhost
+  port: 5432
+  user: yourusername
+  password: yourpassword
+  dbname: yourdbname
+logging:
+  level: debug
+  file: app.log
+security:
+  jwtSecret: your_jwt_secret_key
+  tokenExpiry: 3600
+redis:
+  host: localhost
+  port: 6379
+  password: yourredispassword
+elasticsearch:
+  host: localhost
+  port: 9200
+rabbitmq:
+  host: localhost
+  port: 5672
+  user: yourrabbitmquser
+  password: yourrabbitmqpassword
+kafka:
+  brokers:
+    - localhost:9092
+  topic: your_kafka_topic

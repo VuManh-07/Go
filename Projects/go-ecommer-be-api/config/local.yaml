@@ -1,30 +1,17 @@
 server:
   port: 8080
-database:
-  host: localhost
-  port: 5432
-  user: yourusername
-  password: yourpassword
-  dbname: yourdbname
-logging:
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  username: root
+  password: root123
+  dataname: shopdevgo
+  maxIdleConnections: 10
+  maxOpenConnections: 100
+  connectionsMaxLifetime: 3600
+logger:
   level: debug
-  file: app.log
-security:
-  jwtSecret: your_jwt_secret_key
-  tokenExpiry: 3600
-redis:
-  host: localhost
-  port: 6379
-  password: yourredispassword
-elasticsearch:
-  host: localhost
-  port: 9200
-rabbitmq:
-  host: localhost
-  port: 5672
-  user: yourrabbitmquser
-  password: yourrabbitmqpassword
-kafka:
-  brokers:
-    - localhost:9092
-  topic: your_kafka_topic
+  filename: ./logs/dev.xxx.log
+  maxSize: 500
+  maxBackups: 5
+  maxAge: 30

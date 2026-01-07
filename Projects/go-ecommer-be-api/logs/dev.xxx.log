@@ -1,0 +1,9 @@
+{"level":"INFO","time":"2026-01-07T10:58:36.597+0700","caller":"initialize/run.go:8","msg":"Logger initialized successfully"}
+{"level":"INFO","time":"2026-01-07T11:04:09.204+0700","caller":"initialize/run.go:8","msg":"Logger initialized successfully"}
+{"level":"INFO","time":"2026-01-07T14:24:28.361+0700","caller":"initialize/run.go:8","msg":"Logger initialized successfully"}
+{"level":"INFO","time":"2026-01-07T14:24:28.530+0700","caller":"initialize/database.go:23","msg":"Database connected successfully"}
+{"level":"INFO","time":"2026-01-07T14:27:38.490+0700","caller":"initialize/run.go:8","msg":"Logger initialized successfully"}
+{"level":"INFO","time":"2026-01-07T14:27:38.593+0700","caller":"initialize/database.go:24","msg":"Database connected successfully"}
+{"level":"INFO","time":"2026-01-07T14:30:06.476+0700","caller":"initialize/run.go:8","msg":"Logger initialized successfully"}
+{"level":"INFO","time":"2026-01-07T14:30:06.610+0700","caller":"initialize/database.go:24","msg":"Database connected successfully"}
+{"level":"INFO","time":"2026-01-07T14:30:07.058+0700","caller":"initialize/database.go:51","msg":"Database migrated successfully"}

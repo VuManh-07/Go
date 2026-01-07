@@ -39,21 +39,22 @@ func NewLogger(loggerConfig setting.LoggerConfig) *LoggerZap {
 	}
 	core := zapcore.NewCore(
 		encode,
-		zapcore.NewMultiWriteSyncer(zapcore.AddSync(os.Stdout), zapcore.AddSync(&hook)),
+		zapcore.NewMultiWriteSyncer(zapcore.AddSync(os.Stdout), zapcore.AddSync(&hook)), // write to file and console
 		level,
 	)
 
-	// logger := zap.New(core, zap.AddCaller())
-	// zap.ReplaceGlobals(logger)
-	return &LoggerZap{zap.New(core, zap.AddCaller(), zap.AddStacktrace(zap.ErrorLevel))}
+	return &LoggerZap{
+		zap.New(core, zap.AddCaller(), // show line number
+			zap.AddStacktrace(zap.ErrorLevel)), // show stacktrace when level >= error
+	}
 }
 
 // format log as message
 func getEncodeLog() zapcore.Encoder {
 	encodeConfig := zap.NewProductionEncoderConfig()
 	encodeConfig.TimeKey = "time"
-	encodeConfig.EncodeTime = zapcore.ISO8601TimeEncoder
-	encodeConfig.EncodeLevel = zapcore.CapitalLevelEncoder
+	encodeConfig.EncodeTime = zapcore.ISO8601TimeEncoder   // format time 2024-05-20T15:04:05.000Z0700
+	encodeConfig.EncodeLevel = zapcore.CapitalLevelEncoder // format level INFO, ERROR
 
 	encodeConfig.EncodeCaller = zapcore.ShortCallerEncoder
 	return zapcore.NewJSONEncoder(encodeConfig)

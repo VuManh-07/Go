@@ -1,11 +1,10 @@
 package main
 
 import (
-	"github.com/VuManh-07/Go/Projects/go-ecommer-be-api/internal/routers"
+	"github.com/VuManh-07/Go/Projects/go-ecommer-be-api/internal/initialize"
 )
 
 func main() {
-	r := routers.NewRouter()
 
-	r.Run(":8081")
+	initialize.Run()
 }

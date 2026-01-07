@@ -15,3 +15,8 @@ logger:
   maxSize: 500
   maxBackups: 5
   maxAge: 30
+redis:
+  host: 127.0.0.1
+  port: 6389
+  password:
+  db: 0
